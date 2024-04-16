@@ -6,8 +6,8 @@ def battle_round(fighter_1: dict, fighter_2: dict, round_count: int) -> None:
     print(f"{'*'*17}round {round_count}{'*'*16}")
     print(f"{'=' * 40}")
     # Fighter 1 attack
-    fighter_1_att = randint(0, fighter_1["att"])
-    fighter_2_def = randint(0, fighter_2["def"])
+    fighter_1_att = randint(0, fighter_1["attack"])
+    fighter_2_def = randint(0, fighter_2["defense"])
 
     if fighter_1_att > fighter_2_def:
         fighter_2["hp"] -= 1
@@ -19,8 +19,8 @@ def battle_round(fighter_1: dict, fighter_2: dict, round_count: int) -> None:
     print(f"{fighter_2["name"]} has {fighter_2["hp"]} hp left.")
 
     # Fighter 2 attack
-    fighter_2_att = randint(0, fighter_2["att"])
-    fighter_1_def = randint(0, fighter_1["def"])
+    fighter_2_att = randint(0, fighter_2["attack"])
+    fighter_1_def = randint(0, fighter_1["defense"])
 
     if fighter_2_att > fighter_1_def:
         fighter_1["hp"] -= 1
