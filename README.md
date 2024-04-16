@@ -5,7 +5,7 @@ each other and exchange information. Similar to how a user interacts with an int
 interact with software, applications use APIs to interact with each other.
 
 ## Example
-![Simple API example](/Images/how-api-works.jpg)
+![Simple API example](./Images/how-api-works.jpg)
 Imagine you have two systems: System 1 and System 2. System 1 needs some data or functionality from System 2. Instead of
 directly accessing System 2's code, which could be complex and messy, System 1 can use System 2's API. 
 
