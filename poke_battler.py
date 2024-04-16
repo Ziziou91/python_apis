@@ -12,11 +12,11 @@ def battle_round(fighter_1: dict, fighter_2: dict, round_count: int) -> None:
     if fighter_1_att > fighter_2_def:
         fighter_2["hp"] -= 1
         print(f"{'-'*10}HIT{'-'*10}")
-        print(f"{fighter_1["name"]} damages {fighter_2["name"]} for 1 hp.")
+        print(f"{fighter_1['name']} damages {fighter_2['name']} for 1 hp.")
     else:
         print(f"{'-' * 10}BLOCK{'-' * 10}")
-        print(f"{fighter_2["name"]} blocks {fighter_1["name"]}'s attack.")
-    print(f"{fighter_2["name"]} has {fighter_2["hp"]} hp left.")
+        print(f"{fighter_2['name']} blocks {fighter_1['name']}'s attack.")
+    print(f"{fighter_2['name']} has {fighter_2['hp']} hp left.")
 
     # Fighter 2 attack
     fighter_2_att = randint(0, fighter_2["attack"])
@@ -25,11 +25,11 @@ def battle_round(fighter_1: dict, fighter_2: dict, round_count: int) -> None:
     if fighter_2_att > fighter_1_def:
         fighter_1["hp"] -= 1
         print(f"{'-' * 10}HIT{'-' * 10}")
-        print(f"{fighter_2["name"]} damages {fighter_1["name"]} for 1 hp.")
+        print(f"{fighter_2['name']} damages {fighter_1['name']} for 1 hp.")
     else:
         print(f"{'-' * 10}BLOCK{'-' * 10}")
-        print(f"{fighter_1["name"]} blocks {fighter_2["name"]}'s attack.")
-    print(f"{fighter_1["name"]} has {fighter_1["hp"]} hp left.")
+        print(f"{fighter_1['name']} blocks {fighter_2['name']}'s attack.")
+    print(f"{fighter_1['name']} has {fighter_1['hp']} hp left.")
 
 
 def choose_fighter(player: str) -> dict:
@@ -70,12 +70,12 @@ def main() -> None:
         battle_round(fighter1, fighter2, round_count)
         round_count += 1
 
-    #    print(f"\n{'='*10}BATTLE END{'='*10}")
+    print(f"\n{'='*10}BATTLE END{'='*10}")
 
-    #if fighter1["hp"] > 0:
-    #    print(f"{fighter1['name']} WINS!")
-    #else:
-    #    print(f"{fighter2['name']} WINS!")
+    if fighter1["hp"] > 0:
+        print(f"{fighter1['name']} WINS!")
+    else:
+        print(f"{fighter2['name']} WINS!")
 
 
 if __name__ == "__main__":
