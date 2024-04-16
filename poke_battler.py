@@ -53,12 +53,22 @@ def main() -> None:
     print(f"Player 1's pokemon is {pokemon_1}")
     print(f"Player 2's pokemon is {pokemon_2}")
 
+    fighter1 = {}
+    fighter2 = {}
+
+    # Choose who goes first by comparing speeds.
+    if pokemon_1["speed"] >= pokemon_2["speed"]:
+        fighter1 = pokemon_1
+        fighter2 = pokemon_2
+    else:
+        fighter1 = pokemon_2
+        fighter2 = pokemon_1
 
     # Game is a series of rounds, taking turns to attack and defend
-    #round_count = 0
-    #while fighter1["hp"] > 0 and fighter2["hp"] > 0:
-    #    battle_round(fighter1, fighter2, round_count)
-    #    round_count += 1
+    round_count = 0
+    while fighter1["hp"] > 0 and fighter2["hp"] > 0:
+        battle_round(fighter1, fighter2, round_count)
+        round_count += 1
 
     #    print(f"\n{'='*10}BATTLE END{'='*10}")
 
